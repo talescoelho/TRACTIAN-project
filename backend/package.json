@@ -1,0 +1,43 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/api/app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http-status-codes": "^2.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.1.4",
+    "nodemon": "^2.0.14",
+    "sinon": "^12.0.1",
+    "ts-dotenv": "^0.8.3",
+    "ts-node": "^10.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.7",
+    "@types/sinon": "^10.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "mocha": "^9.1.3",
+    "mongodb-memory-server": "^6.9.6",
+    "nyc": "^15.1.0"
+  },
+  "scripts": {
+    "lint": "eslint",
+    "dev": "tsc && nodemon app.js",
+    "test": "mocha ./dist/integration-tests/*.test.js --timeout 5000 --exit",
+    "test:coverage": "nyc --include='/dist/integration-tests/*.test.js' npm run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
